@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Chess16</string>
+    <string-array name="menu_array">
+        <item>Play</item>
+        <item>Watch</item>
+    </string-array>
+</resources>
