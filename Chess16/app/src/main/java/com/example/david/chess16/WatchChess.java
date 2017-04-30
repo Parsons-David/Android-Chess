@@ -10,4 +10,5 @@ public class WatchChess extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.watch_chess);
     }
+
 }

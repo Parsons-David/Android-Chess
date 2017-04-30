@@ -32,56 +32,48 @@
 
             <Button
                 android:id="@+id/btn8a"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/br"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn8b"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bn"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn8c"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/br"
+                android:drawableLeft="@drawable/bb"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn8d"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bq"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn8e"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bk"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn8f"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/br"
+                android:drawableLeft="@drawable/bb"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn8g"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bn"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn8h"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/br"
@@ -95,13 +87,11 @@
 
             <Button
                 android:id="@+id/btn7a"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
             <Button
-                android:onClick="onButtonClick"
                 android:id="@+id/btn7b"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
@@ -109,42 +99,36 @@
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn7c"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn7d"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bp"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn7e"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn7f"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bp"
                 android:background="@android:color/white" />
             <Button
                 android:id="@+id/btn7g"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn7h"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/bp"
@@ -157,49 +141,41 @@
 
             <Button
                 android:id="@+id/btn6a"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn6b"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn6c"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn6d"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn6e"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn6f"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn6g"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn6h"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark" />
@@ -212,49 +188,41 @@
 
             <Button
                 android:id="@+id/btn5a"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn5b"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn5c"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn5d"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn5e"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn5f"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white" />
             <Button
                 android:id="@+id/btn5g"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn5h"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
@@ -266,49 +234,41 @@
 
             <Button
                 android:id="@+id/btn4a"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn4b"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn4c"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn4d"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn4e"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn4f"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn4g"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn4h"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark" />
@@ -321,49 +281,41 @@
 
             <Button
                 android:id="@+id/btn3a"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn3b"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn3c"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn3d"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn3e"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn3f"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white" />
             <Button
                 android:id="@+id/btn3g"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn3h"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
@@ -375,56 +327,48 @@
 
             <Button
                 android:id="@+id/btn2a"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wp"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn2b"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wp"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn2c"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wp"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn2d"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wp"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn2e"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wp"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn2f"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wp"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn2g"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wp"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn2h"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wp"
@@ -438,56 +382,48 @@
 
             <Button
                 android:id="@+id/btn1a"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wr"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn1b"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wk"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn1c"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wr"
+                android:drawableLeft="@drawable/wb"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn1d"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wq"
                 android:background="@android:color/white"/>
             <Button
                 android:id="@+id/btn1e"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wk"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn1f"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wr"
+                android:drawableLeft="@drawable/wb"
                 android:background="@android:color/white" />
             <Button
                 android:id="@+id/btn1g"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wn"
                 android:background="@android:color/holo_green_dark"/>
             <Button
                 android:id="@+id/btn1h"
-                android:onClick="onButtonClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wr"

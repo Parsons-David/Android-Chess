@@ -8,9 +8,46 @@
     android:orientation="vertical"
     tools:context="com.example.david.chess16.MainMenu">
 
-    <ListView
-        android:id="@+id/menu_items"
+    <Button
+        android:id="@+id/btnPlay"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Play"
+        android:onClick="showPlay"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top">
+
+        <CheckBox
+            android:id="@+id/cboxRecord"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Record Match?"
+            android:onClick="setRecord"/>
+
+        <EditText
+            android:id="@+id/txtTitle"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="Sesh vs. Tjang"
+            android:onClick="setRecord"/>
+
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btnWatch"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Watch"
+        android:onClick="showWatch"/>
 </LinearLayout>
