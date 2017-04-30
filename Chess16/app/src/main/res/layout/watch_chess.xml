@@ -20,9 +20,27 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp">
+            android:layout_height="64dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtTurn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/white_turn"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/txtCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Turn X out of Y"
+                android:textColor="@android:color/white"/>
 
         </LinearLayout>
 
@@ -79,8 +97,6 @@
                 android:drawableLeft="@drawable/br"
                 android:background="@android:color/holo_green_dark" />
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
@@ -134,7 +150,6 @@
                 android:drawableLeft="@drawable/bp"
                 android:background="@android:color/white"/>
         </LinearLayout>
-
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
@@ -180,8 +195,6 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark" />
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
@@ -227,7 +240,6 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
         </LinearLayout>
-
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
@@ -273,8 +285,6 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark" />
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
@@ -320,7 +330,6 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
         </LinearLayout>
-
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
@@ -374,8 +383,6 @@
                 android:drawableLeft="@drawable/wp"
                 android:background="@android:color/holo_green_dark" />
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
@@ -428,6 +435,26 @@
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/wr"
                 android:background="@android:color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <Button
+                android:id="@+id/btnPrevious"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Previous"/>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Next"/>
+
         </LinearLayout>
 
     </LinearLayout>

@@ -12,13 +12,10 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainMenu extends Activity {
 
-    private ListView menuListView;
-    private String[] menuItems;
 
     private Button btnPlay;
     private EditText txtTitle;
@@ -48,6 +45,7 @@ public class MainMenu extends Activity {
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
         });
+
 
         Toast t = Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT);
         t.show();

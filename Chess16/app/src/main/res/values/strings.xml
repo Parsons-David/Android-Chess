@@ -1,8 +1,26 @@
 <resources>
     <string name="app_name">Chess</string>
     <string-array name="menu_array">
-        <item>Play</item>
-        <item>Watch</item>
+        <item>Sesh vs. Tjang</item>
+        <item>David vs. Sarah</item>
+        <item>Sesh vs. Tjang</item>
+        <item>David vs. Sarah</item>
+        <item>Sesh vs. Tjang</item>
+        <item>David vs. Sarah</item>
+        <item>Sesh vs. Tjang</item>
+        <item>David vs. Sarah</item>
+        <item>Sesh vs. Tjang</item>
+        <item>David vs. Sarah</item>
+        <item>Sesh vs. Tjang</item>
+        <item>David vs. Sarah</item>
+        <item>Sesh vs. Tjang</item>
+        <item>David vs. Sarah</item>
+        <item>Sesh vs. Tjang</item>
+        <item>David vs. Sarah</item>
+        <item>Sesh vs. Tjang</item>
+        <item>David vs. Sarah</item>
+        <item>Sesh vs. Tjang</item>
+        <item>David vs. Sarah</item>
     </string-array>
     <string name="white_turn">Turn: White</string>
     <string name="black_turn">Turn: Black</string>

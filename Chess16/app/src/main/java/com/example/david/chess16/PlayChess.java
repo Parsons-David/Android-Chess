@@ -8,14 +8,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class PlayChess extends Activity {
 
 //    private Board playingBoard;
     private Button[][] boardBtns;
     private Button btnUndo, btnAI, btnDraw, btnResign;
+    private LinearLayout promoButtons;
 
     private Button selected = null;
     private Color sColor = null;
@@ -38,6 +43,9 @@ public class PlayChess extends Activity {
         btnAI = (Button) findViewById(R.id.btnAI);
         btnDraw = (Button) findViewById(R.id.btnDraw);
         btnResign = (Button) findViewById(R.id.btnResign);
+
+        promoButtons = (LinearLayout) findViewById(R.id.promoButtons);
+        promoButtons.setVisibility(View.INVISIBLE);
 
         btnUndo.setEnabled(false);
 
@@ -97,6 +105,13 @@ public class PlayChess extends Activity {
         if(selected == null){ // Selecting First Piece to move (getting src)
 
             // HANDLE PROMOTION
+            ArrayList<String> possiblePromos = new ArrayList<String>();
+            possiblePromos.add("8a");
+            possiblePromos.add("1h");
+//            possiblePromos = playingBoard.getPossiblePromoteSpaces();
+            if(possiblePromos.contains(idName)){
+                promoButtons.setVisibility(View.VISIBLE);
+            }
 
             // Control
             selected = clicked;
@@ -130,6 +145,7 @@ public class PlayChess extends Activity {
             selected = null;
 
             // View
+            promoButtons.setVisibility(View.INVISIBLE);
             btnUndo.setEnabled(true);
             btnAI.setEnabled(true);
 
