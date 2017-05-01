@@ -11,13 +11,18 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import control.Match;
+import control.Engine;
+import control.Move;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PlayChess extends Activity {
 
-//    private Board playingBoard;
+    private Match match;
+    private Move currentMove;
+
     private Button[][] boardBtns;
     private Button btnUndo, btnAI, btnDraw, btnResign;
     private LinearLayout promoButtons;
@@ -33,11 +38,12 @@ public class PlayChess extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.play_chess);
 
-//        unpack(match.getBoard());
+        match = Engine.startNewMatch("");
+        unpack(match.executeMove("1e", "1f", false, ' '));
 
         createButtonArray();
 
-        createBoard();
+//        createBoard();
 
         btnUndo = (Button) findViewById(R.id.btnUndo);
         btnAI = (Button) findViewById(R.id.btnAI);
@@ -154,12 +160,12 @@ public class PlayChess extends Activity {
 
     }
 
-//    private void unpack (Board b){
-//        playingBoard = b;
-//        ((TextView) findViewById(R.id.txtTurn)).setText(playingBoard.getTurn == 'w' ? R.string.white_turn : R.string.black_turn);
-//
-//        displayBoard(playingBoard.getPieces());
-//    }
+    private void unpack (Move m){
+        currentMove = m;
+        ((TextView) findViewById(R.id.txtTurn)).setText(currentMove.getTurn() == 'w' ? R.string.white_turn : R.string.black_turn);
+
+        displayBoard(currentMove.getPieces());
+    }
 
     private void displayBoard(String[][] pieces){
 
