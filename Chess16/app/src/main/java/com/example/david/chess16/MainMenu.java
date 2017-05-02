@@ -15,8 +15,6 @@ public class MainMenu extends Activity {
 
 
     private Button btnPlay;
-    private EditText txtTitle;
-    private CheckBox cboxRecord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,25 +22,6 @@ public class MainMenu extends Activity {
         setContentView(R.layout.main_menu);
 
         btnPlay = (Button) findViewById(R.id.btnPlay);
-        txtTitle = (EditText) findViewById(R.id.txtTitle);
-        cboxRecord = (CheckBox) findViewById(R.id.cboxRecord);
-
-        txtTitle.setEnabled(false);
-
-        txtTitle.addTextChangedListener(new TextWatcher() {
-
-            public void afterTextChanged(Editable s) {
-
-                // you can call or do what you want with your EditText here
-                setRecord(txtTitle);
-
-            }
-
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
-        });
-
 
         Toast t = Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT);
         t.show();
@@ -63,12 +42,4 @@ public class MainMenu extends Activity {
         startActivity(intent);
     }
 
-    public void setRecord(View v){
-
-//        cboxRecord.isChecked();
-
-        txtTitle.setEnabled(cboxRecord.isChecked());
-        btnPlay.setEnabled(cboxRecord.isChecked() ? ! txtTitle.getText().toString().equals("") : true);
-
-    }
 }

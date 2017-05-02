@@ -22,7 +22,7 @@ import java.util.Arrays;
 
 public class PlayChess extends Activity {
 
-    private Match match;
+    Match match;
     private Move currentMove;
     private Move prevMove = null;
 
@@ -143,7 +143,7 @@ public class PlayChess extends Activity {
             idName = "Resign";
             String message = match.resignation();
             endMatch(message);
-            Engine.saveMatch();
+//            Engine.saveMatch();
 //            return;
 
         } else {
@@ -243,6 +243,8 @@ public class PlayChess extends Activity {
         btnAI.setEnabled(false);
         btnDraw.setEnabled(false);
         btnResign.setEnabled(false);
+        TextDialogFragment saveMatch = new TextDialogFragment();
+        saveMatch.show(getFragmentManager(), "badfields");
     }
 
     private void toggleEnable(Button b){
