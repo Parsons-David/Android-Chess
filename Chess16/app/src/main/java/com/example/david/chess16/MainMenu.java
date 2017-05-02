@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.david.chess16.control.Engine;
+
 public class MainMenu extends Activity {
 
 
@@ -23,8 +25,12 @@ public class MainMenu extends Activity {
 
         btnPlay = (Button) findViewById(R.id.btnPlay);
 
-        Toast t = Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT);
-        t.show();
+        Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
+        try {
+            Engine.load();
+        } catch (Exception e){
+            Toast.makeText(getApplicationContext(), "Previous Seesion Not Loaded", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void showPlay(View v) {

@@ -37,6 +37,12 @@ public class TextDialogFragment extends DialogFragment {
                         ((PlayChess) getActivity()).match.setTitle(input.getText().toString());
                         Engine.saveMatch();
                         Toast.makeText(getContext(), "Match Saved as " + input.getText().toString(), Toast.LENGTH_SHORT).show();
+                        try {
+                            Engine.saveState();
+                        } catch (Exception e){
+                            Toast.makeText(getContext(), "Seesion Not Saved", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                        }
                         ((PlayChess) getActivity()).finish();
                     }
                 });
