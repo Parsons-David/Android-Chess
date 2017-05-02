@@ -63,6 +63,7 @@ public class PlayChess extends Activity {
         match = Engine.startNewMatch("");
         unpack(match.executeMove("8a", "1h", false, 'Q'));
 
+        canUndo = false;
         btnUndo.setEnabled(canUndo);
 
     }
