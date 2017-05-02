@@ -123,7 +123,7 @@ public class Match {
 
 		if (!isOngoing()) {
 			if (engineBoard.inStalemate()) {
-				endStatus = "Stalemate on " + ((engineBoard.getTurn() == 'w') ? "white" : "black") + "to move.";
+				endStatus = "Stalemate on " + ((engineBoard.getTurn() == 'w') ? "white" : "black") + " to move.";
 			} else if (engineBoard.checkMate()) {
 				endStatus = "Checkmate. " + ((engineBoard.getTurn() == 'w') ? "Black" : "White") + " wins!";
 			}

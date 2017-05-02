@@ -24,7 +24,6 @@ public class PlayChess extends Activity {
 
     Match match;
     private Move currentMove;
-    private Move prevMove = null;
 
     // Move Stuff
     private ArrayList<String> possiblePromos = new ArrayList<String>();
@@ -35,10 +34,8 @@ public class PlayChess extends Activity {
     private LinearLayout promoButtons;
 
     private ImageButton selected = null;
-    private Color sColor = null;
     private Boolean sendDraw = false;
 
-    Boolean acceptedDraw = false;
     boolean canUndo = false;
 
     // HANDLE INITIAL UNDO
@@ -82,10 +79,10 @@ public class PlayChess extends Activity {
         currentMove = m;
 
         if(currentMove.hasPendingDraw()){
-            Toast.makeText(getApplicationContext(),"Pending Draw", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(),"Pending Draw", Toast.LENGTH_SHORT).show();
 
             Bundle bundle = new Bundle();
-            bundle.putString(ChessDialogFragment.MESSAGE_KEY, "Pending Draw");
+            bundle.putString(ChessDialogFragment.MESSAGE_KEY, m.getTurn() + "");
 
             DialogFragment draw = new ChessDialogFragment();
             draw.setArguments(bundle);
@@ -99,7 +96,7 @@ public class PlayChess extends Activity {
 
 
         if(currentMove.getPossiblePromoteSpaces() == null){
-            Toast.makeText(getApplicationContext(),"Error Promote Spaces returned null.", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(),"Error Promote Spaces returned null.", Toast.LENGTH_SHORT).show();
         } else {
             possiblePromos = currentMove.getPossiblePromoteSpaces();
         }
@@ -135,7 +132,7 @@ public class PlayChess extends Activity {
 
             Move tmp = match.makeAIMove(sendDraw);
             if(tmp == null){
-                Toast.makeText(this, "AI is null.", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "AI is null.", Toast.LENGTH_SHORT).show();
             }
             unpack(tmp);
             return;
@@ -160,7 +157,7 @@ public class PlayChess extends Activity {
             idName = v.getResources().getResourceName(clicked.getId());
         }
 
-        Toast.makeText(this, idName + " pressed.", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, idName + " pressed.", Toast.LENGTH_SHORT).show();
     }
 
     void acceptDraw(){
@@ -221,7 +218,7 @@ public class PlayChess extends Activity {
                 if(tmp != null){
                     unpack(tmp);
                 } else {
-                    Toast.makeText(getApplicationContext(),"Null Move", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),"Null Move", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -260,7 +257,7 @@ public class PlayChess extends Activity {
     }
 
     private void endMatch(String message){
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
         btnUndo.setEnabled(false);
         btnAI.setEnabled(false);
         btnDraw.setEnabled(false);
@@ -299,44 +296,6 @@ public class PlayChess extends Activity {
             }
         }
     }
-
-    private String[][] createBoard() {
-        String tmpTxtBoard[][] = new String[8][8];
-
-        tmpTxtBoard[0][7] = "bR";
-        tmpTxtBoard[1][7] = "bN";
-        tmpTxtBoard[2][7] = "bB";
-        tmpTxtBoard[3][7] = "bQ";
-        tmpTxtBoard[4][7] = "bK";
-        tmpTxtBoard[5][7] = "bB";
-        tmpTxtBoard[6][7] = "bN";
-        tmpTxtBoard[7][7] = "bR";
-
-        for (int i = 0; i < 8; i++) {
-            tmpTxtBoard[i][6] = "bP";
-            tmpTxtBoard[i][1] = "wP";
-        }
-
-        tmpTxtBoard[0][0] = "wR";
-        tmpTxtBoard[1][0] = "wN";
-        tmpTxtBoard[2][0] = "wB";
-        tmpTxtBoard[3][0] = "wQ";
-        tmpTxtBoard[4][0] = "wK";
-        tmpTxtBoard[5][0] = "wB";
-        tmpTxtBoard[6][0] = "wN";
-        tmpTxtBoard[7][0] = "wR";
-
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                if (tmpTxtBoard[i][j] == null) {
-                    tmpTxtBoard[i][j] = "";
-                }
-            }
-        }
-
-        return tmpTxtBoard;
-    }
-
 
 
     public void createButtonArray(){

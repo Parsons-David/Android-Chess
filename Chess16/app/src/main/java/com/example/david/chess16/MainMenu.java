@@ -16,35 +16,32 @@ import com.example.david.chess16.control.Engine;
 public class MainMenu extends Activity {
 
 
-    private Button btnPlay;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
 
-        btnPlay = (Button) findViewById(R.id.btnPlay);
+        // Load from Previous Session, Do nothing if not file found
 
-        Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
         try {
             Engine.load(getApplicationContext());
         } catch (Exception e){
-            Toast.makeText(getApplicationContext(), "Previous Seesion Not Loaded", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "Previous Seesion Not Loaded", Toast.LENGTH_SHORT).show();
         }
+
     }
 
+
+    // Move to Play Match Activity
     public void showPlay(View v) {
-        Bundle bundle = new Bundle();
         Intent intent = new Intent(this, PlayChess.class);
-        intent.putExtras(bundle);
         startActivity(intent);
-        // ADD TITLE AND RECORD
     }
 
+    // Move to Watch Menu Activity
     public void showWatch(View v){
-        Bundle bundle = new Bundle();
         Intent intent = new Intent(this, WatchMenu.class);
-        intent.putExtras(bundle);
         startActivity(intent);
     }
 
