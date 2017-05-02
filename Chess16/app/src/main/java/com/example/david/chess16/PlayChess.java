@@ -61,7 +61,7 @@ public class PlayChess extends Activity {
         promoButtons.setVisibility(View.INVISIBLE);
 
         match = Engine.startNewMatch("");
-        displayBoard(match.getCurrentDisplayBoard());
+        unpack(match.executeMove("8a", "1h", false, 'Q'));
 
         btnUndo.setEnabled(canUndo);
 
