@@ -28,9 +28,10 @@ public class PlayChess extends Activity {
 
     // Move Stuff
     private ArrayList<String> possiblePromos = new ArrayList<String>();
+    private char promo = 'Q';
 
     private ImageButton[][] boardBtns;
-    private Button btnUndo, btnAI, btnDraw, btnResign;
+    private Button btnUndo, btnAI, btnDraw, btnResign, btnPR, btnPN, btnPB, btnPQ;
     private LinearLayout promoButtons;
 
     private ImageButton selected = null;
@@ -52,6 +53,11 @@ public class PlayChess extends Activity {
         btnAI = (Button) findViewById(R.id.btnAI);
         btnDraw = (Button) findViewById(R.id.btnDraw);
         btnResign = (Button) findViewById(R.id.btnResign);
+
+        btnPR = (Button) findViewById(R.id.btnpr);
+        btnPB = (Button) findViewById(R.id.btnpb);
+        btnPN = (Button) findViewById(R.id.btnpn);
+        btnPQ = (Button) findViewById(R.id.btnpq);
 
         promoButtons = (LinearLayout) findViewById(R.id.promoButtons);
         promoButtons.setVisibility(View.INVISIBLE);
@@ -91,6 +97,7 @@ public class PlayChess extends Activity {
 
         btnDraw.setText("Send Draw");
         sendDraw = false;
+        promo = 'Q';
 
 
         if(currentMove.getPossiblePromoteSpaces() == null){
@@ -158,7 +165,21 @@ public class PlayChess extends Activity {
     }
 
     public void onPromoClick(View v){
-
+        btnPB.setBackgroundColor(Color.GRAY);
+        btnPN.setBackgroundColor(Color.GRAY);
+        btnPR.setBackgroundColor(Color.GRAY);
+        btnPQ.setBackgroundColor(Color.GRAY);
+        Button clicked = (Button) v;
+        clicked.setBackgroundColor(Color.GREEN);
+        if(clicked == btnPB){
+            promo = 'B';
+        } else if(clicked == btnPR){
+            promo = 'R';
+        } else if(clicked == btnPN){
+            promo = 'N';
+        } else {
+            promo = 'Q';
+        }
     }
 
     public void onBoardClick(View v){
@@ -173,9 +194,7 @@ public class PlayChess extends Activity {
             // HANDLE PROMOTION
             if(possiblePromos.contains(idName)){
                 promoButtons.setVisibility(View.VISIBLE);
-            }
-            for(String i : possiblePromos){
-                Toast.makeText(this, i + " ?= " + idName, Toast.LENGTH_SHORT).show();
+                onPromoClick(btnPQ);
             }
 
             // Control
@@ -195,7 +214,7 @@ public class PlayChess extends Activity {
 
 //                Toast.makeText(getApplicationContext(), sidName + "," + idName + ", " + sendDraw + ", \' \'", Toast.LENGTH_SHORT).show();
 
-                Move tmp = match.executeMove(sidName, idName, sendDraw, 'Q');
+                Move tmp = match.executeMove(sidName, idName, sendDraw, promo);
                 if(tmp != null){
                     unpack(tmp);
                 } else {
