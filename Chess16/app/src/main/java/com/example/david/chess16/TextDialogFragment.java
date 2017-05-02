@@ -29,7 +29,7 @@ public class TextDialogFragment extends DialogFragment {
         // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
         input.setInputType(InputType.TYPE_CLASS_TEXT);
         builder.setView(input);
-        builder.setTitle("Save?");
+        builder.setTitle("If you would like to Save, Enter a title and hit save.");
         builder.setPositiveButton("Save",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,
@@ -40,8 +40,8 @@ public class TextDialogFragment extends DialogFragment {
                         try {
                             Engine.saveState(getContext());
                         } catch (Exception e){
-                            Toast.makeText(getContext(), "Seesion Not Saved", Toast.LENGTH_SHORT).show();
-                            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+//                            Toast.makeText(getContext(), "Seesion Not Saved", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                         }
                         ((PlayChess) getActivity()).finish();
                     }

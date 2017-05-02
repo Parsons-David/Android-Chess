@@ -103,6 +103,11 @@ public class PlayChess extends Activity {
 
 
         ((TextView) findViewById(R.id.txtTurn)).setText(currentMove.getTurn() == 'w' ? R.string.white_turn : R.string.black_turn);
+        if(m.getCheck() == 'w'){
+            ((TextView) findViewById(R.id.txtTurn)).setText("Turn: White is in Check.");
+        } else if (m.getCheck() == 'b'){
+            ((TextView) findViewById(R.id.txtTurn)).setText("Turn: Black is in Check.");
+        }
         displayBoard(currentMove.getPieces());
 
         if(!match.isOngoing()){
@@ -307,7 +312,7 @@ public class PlayChess extends Activity {
                 String id =  "btn"  + String.valueOf(j + 1) + ((char) ('a' + i));
                 ImageButton b = (ImageButton) findViewById(getResources().getIdentifier(id, "id", getApplicationContext().getPackageName()));
                 if(b == null){
-                    Toast.makeText(this, "Error Loading", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this, "Error Loading", Toast.LENGTH_SHORT).show();
                 } else {
 //                    Toast.makeText(this, id + " -> " + i + ", " + j, Toast.LENGTH_SHORT).show();
                     boardBtns[i][j] = b;

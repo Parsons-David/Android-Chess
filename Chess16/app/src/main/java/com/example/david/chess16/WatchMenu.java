@@ -88,10 +88,10 @@ public class WatchMenu extends Activity {
         btnSortByTitle.setEnabled(!btnSortByTitle.isEnabled());
         btnSortByDate.setEnabled(!btnSortByDate.isEnabled());
         if(clicked == btnSortByDate){
-            Toast.makeText(this, "Sort by Date", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Sort by Date", Toast.LENGTH_SHORT).show();
             updateListView(false);
         } else {
-            Toast.makeText(this, "Sort by Title", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Sort by Title", Toast.LENGTH_SHORT).show();
             updateListView(true);
         }
     }

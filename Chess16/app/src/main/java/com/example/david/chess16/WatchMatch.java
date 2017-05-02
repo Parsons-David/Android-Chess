@@ -96,7 +96,7 @@ public class WatchMatch extends Activity {
                 String id =  "btnW"  + String.valueOf(j + 1) + ((char) ('a' + i));
                 ImageButton b = (ImageButton) findViewById(getResources().getIdentifier(id, "id", getApplicationContext().getPackageName()));
                 if(b == null){
-                    Toast.makeText(this, "Error Loading", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this, "Error Loading", Toast.LENGTH_SHORT).show();
                 } else {
 //                    Toast.makeText(this, id + " -> " + i + ", " + j, Toast.LENGTH_SHORT).show();
                     boardBtns[i][j] = b;

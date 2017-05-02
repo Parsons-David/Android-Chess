@@ -19,7 +19,9 @@ public class ChessDialogFragment extends DialogFragment {
         // Use the Builder class for convenient dialog construction
         Bundle bundle = getArguments();
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("Accept Draw?");
+        String p = bundle.getString(MESSAGE_KEY);
+        String message = (p.equals("w") ? "Black" : "White" ) + " is offering a Draw.";
+        builder.setTitle(message);
         builder.setPositiveButton("Accept",
             new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog,
