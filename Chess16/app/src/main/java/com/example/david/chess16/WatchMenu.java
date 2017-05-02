@@ -42,10 +42,10 @@ public class WatchMenu extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getApplicationContext(), "You selected index " + String.valueOf(position) , Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "You selected index " + String.valueOf(position) , Toast.LENGTH_SHORT).show();
 
                 if(noMatches){
-//                    return;
+                    return;
                 }
 
                 watchMatch(position);
@@ -56,7 +56,7 @@ public class WatchMenu extends Activity {
 
     public void watchMatch(int index){
 
-        Toast.makeText(getApplicationContext(), "You want to Watch Match #" + String.valueOf(index) , Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "You want to Watch Match #" + String.valueOf(index) , Toast.LENGTH_SHORT).show();
 
         Bundle bundle = new Bundle();
         bundle.putInt("Match", index);

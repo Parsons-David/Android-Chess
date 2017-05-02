@@ -4,7 +4,6 @@ import com.example.david.chess16.pieces.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
-import java.util.List;
 import java.util.Random;
 
 
@@ -20,7 +19,7 @@ import java.util.Random;
 public class Match {
 	Board engineBoard;
 	private String[][] displayBoard = new String[8][8];
-	private List<Move> moves = new ArrayList<Move>();
+	private ArrayList<Move> moves = new ArrayList<Move>();
 	private String title;
 	private int currentMoveIndex = 0;
 	private String endStatus;

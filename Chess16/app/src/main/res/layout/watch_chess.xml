@@ -48,392 +48,383 @@
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
-                android:id="@+id/btn8a"
+            <ImageButton
+                android:id="@+id/btnW8a"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/br"
+                android:src="@drawable/br"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn8b"
+            <ImageButton
+                android:id="@+id/btnW8b"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bn"
+                android:src="@drawable/bn"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn8c"
+            <ImageButton
+                android:id="@+id/btnW8c"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bb"
+                android:src="@drawable/bb"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn8d"
+            <ImageButton
+                android:id="@+id/btnW8d"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bq"
+                android:src="@drawable/bq"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn8e"
+            <ImageButton
+                android:id="@+id/btnW8e"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bk"
+                android:src="@drawable/bk"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn8f"
+            <ImageButton
+                android:id="@+id/btnW8f"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bb"
+                android:src="@drawable/bb"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn8g"
+            <ImageButton
+                android:id="@+id/btnW8g"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bn"
+                android:src="@drawable/bn"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn8h"
+            <ImageButton
+                android:id="@+id/btnW8h"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/br"
+                android:src="@drawable/br"
                 android:background="@android:color/holo_green_dark" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
-                android:id="@+id/btn7a"
+            <ImageButton
+                android:id="@+id/btnW7a"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn7b"
+            <ImageButton
+                android:id="@+id/btnW7b"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn7c"
+            <ImageButton
+                android:id="@+id/btnW7c"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn7d"
+            <ImageButton
+                android:id="@+id/btnW7d"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn7e"
+            <ImageButton
+                android:id="@+id/btnW7e"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn7f"
+            <ImageButton
+                android:id="@+id/btnW7f"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/white" />
-            <Button
-                android:id="@+id/btn7g"
+            <ImageButton
+                android:id="@+id/btnW7g"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn7h"
+            <ImageButton
+                android:id="@+id/btnW7h"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/white"/>
         </LinearLayout>
+
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
-                android:id="@+id/btn6a"
+            <ImageButton
+                android:id="@+id/btnW6a"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn6b"
+            <ImageButton
+                android:id="@+id/btnW6b"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn6c"
+            <ImageButton
+                android:id="@+id/btnW6c"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn6d"
+            <ImageButton
+                android:id="@+id/btnW6d"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn6e"
+            <ImageButton
+                android:id="@+id/btnW6e"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn6f"
+            <ImageButton
+                android:id="@+id/btnW6f"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn6g"
+            <ImageButton
+                android:id="@+id/btnW6g"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn6h"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_green_dark" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_height="48dp"
-            android:layout_width="match_parent">
-
-            <Button
-                android:id="@+id/btn5a"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn5b"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn5c"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn5d"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn5e"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn5f"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white" />
-            <Button
-                android:id="@+id/btn5g"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn5h"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_height="48dp"
-            android:layout_width="match_parent">
-
-            <Button
-                android:id="@+id/btn4a"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn4b"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn4c"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn4d"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn4e"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn4f"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn4g"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn4h"
+            <ImageButton
+                android:id="@+id/btnW6h"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
-                android:id="@+id/btn3a"
+            <ImageButton
+                android:id="@+id/btnW5a"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn3b"
+            <ImageButton
+                android:id="@+id/btnW5b"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn3c"
+            <ImageButton
+                android:id="@+id/btnW5c"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn3d"
+            <ImageButton
+                android:id="@+id/btnW5d"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn3e"
+            <ImageButton
+                android:id="@+id/btnW5e"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn3f"
+            <ImageButton
+                android:id="@+id/btnW5f"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white" />
-            <Button
-                android:id="@+id/btn3g"
+            <ImageButton
+                android:id="@+id/btnW5g"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn3h"
+            <ImageButton
+                android:id="@+id/btnW5h"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
         </LinearLayout>
+
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
-                android:id="@+id/btn2a"
+            <ImageButton
+                android:id="@+id/btnW4a"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn2b"
+            <ImageButton
+                android:id="@+id/btnW4b"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn2c"
+            <ImageButton
+                android:id="@+id/btnW4c"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn2d"
+            <ImageButton
+                android:id="@+id/btnW4d"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn2e"
+            <ImageButton
+                android:id="@+id/btnW4e"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn2f"
+            <ImageButton
+                android:id="@+id/btnW4f"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn2g"
+            <ImageButton
+                android:id="@+id/btnW4g"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn2h"
+            <ImageButton
+                android:id="@+id/btnW4h"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
                 android:background="@android:color/holo_green_dark" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
-                android:id="@+id/btn1a"
+            <ImageButton
+                android:id="@+id/btnW3a"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wr"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn1b"
+            <ImageButton
+                android:id="@+id/btnW3b"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wk"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn1c"
+            <ImageButton
+                android:id="@+id/btnW3c"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wb"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn1d"
+            <ImageButton
+                android:id="@+id/btnW3d"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wq"
                 android:background="@android:color/white"/>
-            <Button
-                android:id="@+id/btn1e"
+            <ImageButton
+                android:id="@+id/btnW3e"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wk"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn1f"
+            <ImageButton
+                android:id="@+id/btnW3f"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wb"
                 android:background="@android:color/white" />
-            <Button
-                android:id="@+id/btn1g"
+            <ImageButton
+                android:id="@+id/btnW3g"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wn"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
-                android:id="@+id/btn1h"
+            <ImageButton
+                android:id="@+id/btnW3h"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wr"
+                android:background="@android:color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="48dp"
+            android:layout_width="match_parent">
+
+            <ImageButton
+                android:id="@+id/btnW2a"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"/>
+            <ImageButton
+                android:id="@+id/btnW2b"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark"/>
+            <ImageButton
+                android:id="@+id/btnW2c"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"/>
+            <ImageButton
+                android:id="@+id/btnW2d"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark"/>
+            <ImageButton
+                android:id="@+id/btnW2e"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"/>
+            <ImageButton
+                android:id="@+id/btnW2f"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark"/>
+            <ImageButton
+                android:id="@+id/btnW2g"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"/>
+            <ImageButton
+                android:id="@+id/btnW2h"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="48dp"
+            android:layout_width="match_parent">
+
+            <ImageButton
+                android:id="@+id/btnW1a"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark"/>
+            <ImageButton
+                android:id="@+id/btnW1b"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"/>
+            <ImageButton
+                android:id="@+id/btnW1c"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark"/>
+            <ImageButton
+                android:id="@+id/btnW1d"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"/>
+            <ImageButton
+                android:id="@+id/btnW1e"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark"/>
+            <ImageButton
+                android:id="@+id/btnW1f"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white" />
+            <ImageButton
+                android:id="@+id/btnW1g"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark"/>
+            <ImageButton
+                android:id="@+id/btnW1h"                
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
                 android:background="@android:color/white"/>
         </LinearLayout>
 
@@ -446,6 +437,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:onClick="onPrevClick"
                 android:text="Previous"/>
 
             <Button
@@ -453,6 +445,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:onClick="onNextClick"
                 android:text="Next"/>
 
         </LinearLayout>

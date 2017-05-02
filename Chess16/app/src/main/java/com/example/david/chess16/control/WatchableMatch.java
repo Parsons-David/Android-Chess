@@ -3,18 +3,17 @@ import com.example.david.chess16.pieces.*;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class WatchableMatch {
 
 	private String[][] displayBoard = new String[8][8];
-	private List<Move> moves = new ArrayList<Move>();
+	private ArrayList<Move> moves = new ArrayList<Move>();
 	int currentMoveIndex = 0;
 	String title;
 	String endMessage;
 	Date date;
 
-	WatchableMatch(String title, List<Move> moves, String endMessage, Date date) {
+	WatchableMatch(String title, ArrayList<Move> moves, String endMessage, Date date) {
 		this.title = title;
 		this.moves = moves;
 		this.endMessage = endMessage;
@@ -26,7 +25,7 @@ public class WatchableMatch {
 	 */
 	public void setToZerothMove() {
 		populateDisplayBoard();
-		currentMoveIndex = -1;
+		currentMoveIndex = 0;
 	}
 
 	public String[][] start() {
@@ -41,8 +40,12 @@ public class WatchableMatch {
 	 * @return Next Move
 	 */
 	public String[][] getNextMove() {
-		if (currentMoveIndex >= moves.size() - 1) {
+		if (currentMoveIndex > moves.size() - 1) {
 			return null;
+		}
+		if (currentMoveIndex == moves.size() - 1) {
+			displayBoard = moves.get(currentMoveIndex).displayBoard;
+			return displayBoard;
 		}
 		displayBoard = moves.get(++currentMoveIndex).displayBoard;
 		return displayBoard;
@@ -55,11 +58,23 @@ public class WatchableMatch {
 	 * @return Previous Move
 	 */
 	public String[][] getPrevMove() {
-		if (currentMoveIndex <= 0) {
+		if (currentMoveIndex < 0) {
 			return null;
+		}
+		if (currentMoveIndex == 0) {
+			displayBoard = moves.get(currentMoveIndex).displayBoard;
+			return displayBoard;
 		}
 		displayBoard = moves.get(--currentMoveIndex).displayBoard;
 		return displayBoard;
+	}
+
+	public int getTotalNumberOfMoves() {
+		return moves.size();
+	}
+
+	public int getCurrentMove() {
+		return currentMoveIndex;
 	}
 
 	/**

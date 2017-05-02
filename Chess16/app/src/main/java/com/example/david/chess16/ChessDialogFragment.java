@@ -24,7 +24,7 @@ public class ChessDialogFragment extends DialogFragment {
             new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog,
                                     int id) {
-                    Toast.makeText(getContext(), "Draw Accepted", Toast.LENGTH_SHORT).show();
+                    ((PlayChess) getActivity()).acceptDraw();
                 }
             });
         builder.setNegativeButton("Decline",

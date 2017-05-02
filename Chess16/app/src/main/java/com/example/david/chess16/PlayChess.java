@@ -1,5 +1,6 @@
 package com.example.david.chess16;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
@@ -35,6 +36,8 @@ public class PlayChess extends Activity {
     private ImageButton selected = null;
     private Color sColor = null;
     private Boolean sendDraw = false;
+
+    Boolean acceptedDraw = false;
 
     // HANDLE INITIAL UNDO
 
@@ -150,6 +153,10 @@ public class PlayChess extends Activity {
         Toast.makeText(this, idName + " pressed.", Toast.LENGTH_SHORT).show();
     }
 
+    void acceptDraw(){
+        endMatch(match.acceptDraw());
+    }
+
     public void onPromoClick(View v){
 
     }
@@ -232,7 +239,7 @@ public class PlayChess extends Activity {
 
     private void endMatch(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
-        btnDraw.setEnabled(false);
+        btnUndo.setEnabled(false);
         btnAI.setEnabled(false);
         btnDraw.setEnabled(false);
         btnResign.setEnabled(false);
