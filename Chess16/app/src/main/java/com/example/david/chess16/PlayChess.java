@@ -70,7 +70,7 @@ public class PlayChess extends Activity {
     private void unpack (Move m){
 //        Toast.makeText(getApplicationContext(),"Unpacking...", Toast.LENGTH_SHORT).show();
         if(currentMove == m){
-//        Toast.makeText(getApplicationContext(),"No New Move Made", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Invalid move.", Toast.LENGTH_SHORT).show();
             return;
         }
 
