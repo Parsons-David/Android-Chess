@@ -1,6 +1,7 @@
 package com.example.david.chess16.control;
-import com.example.david.chess16.control.*;
+import com.example.david.chess16.pieces.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -11,7 +12,13 @@ import java.util.ArrayList;
  * @author Phil
  *
  */
-public class Move {
+public class Move implements Serializable {
+
+	/**
+	 * Default Serial Version
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
 
 	Point firstPieceOrigin = null;
 	Point firstPieceTarget = null;

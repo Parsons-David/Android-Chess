@@ -38,6 +38,8 @@ public class WatchMenu extends Activity {
 
         updateListView(true);
 
+        btnSortByTitle.setEnabled(false);
+
         matchListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -83,6 +85,8 @@ public class WatchMenu extends Activity {
 
     public void onSortClick(View v){
         Button clicked = (Button) v;
+        btnSortByTitle.setEnabled(!btnSortByTitle.isEnabled());
+        btnSortByDate.setEnabled(!btnSortByDate.isEnabled());
         if(clicked == btnSortByDate){
             Toast.makeText(this, "Sort by Date", Toast.LENGTH_SHORT).show();
             updateListView(false);

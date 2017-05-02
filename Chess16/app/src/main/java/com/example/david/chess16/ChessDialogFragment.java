@@ -34,6 +34,7 @@ public class ChessDialogFragment extends DialogFragment {
                         Toast.makeText(getContext(), "Draw Declined", Toast.LENGTH_SHORT).show();
                     }
                 });
+
         // Create the AlertDialog object and return it
         return builder.create();
 

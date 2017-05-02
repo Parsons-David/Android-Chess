@@ -39,6 +39,7 @@ public class PlayChess extends Activity {
     private Boolean sendDraw = false;
 
     Boolean acceptedDraw = false;
+    boolean canUndo = false;
 
     // HANDLE INITIAL UNDO
 
@@ -62,15 +63,10 @@ public class PlayChess extends Activity {
         promoButtons = (LinearLayout) findViewById(R.id.promoButtons);
         promoButtons.setVisibility(View.INVISIBLE);
 
-        btnUndo.setEnabled(false);
-
         match = Engine.startNewMatch("");
-//        unpack(match.executeMove("1a", "1h", false, 'Q'));
         displayBoard(match.getCurrentDisplayBoard());
 
-
-        possiblePromos.add("8a");
-        possiblePromos.add("1h");
+        btnUndo.setEnabled(canUndo);
 
     }
 
@@ -82,6 +78,7 @@ public class PlayChess extends Activity {
         }
 
         // Can assume valid new move has been made
+        canUndo = true;
         currentMove = m;
 
         if(currentMove.hasPendingDraw()){
@@ -92,6 +89,7 @@ public class PlayChess extends Activity {
 
             DialogFragment draw = new ChessDialogFragment();
             draw.setArguments(bundle);
+            draw.setCancelable(false);
             draw.show(getFragmentManager(), "badfields");
         }
 
@@ -121,16 +119,20 @@ public class PlayChess extends Activity {
         Button clicked = (Button) v;
 
         if(clicked == btnUndo){
-            btnUndo.setEnabled(false);
-
             idName = "Undo";
             Move tmp = match.undo();
             unpack(tmp);
 //            return;
+            canUndo = false;
+            btnUndo.setEnabled(canUndo);
+
 
         } else if(clicked == btnAI){
 
             idName = "AI";
+            canUndo = true;
+            btnUndo.setEnabled(canUndo);
+
             Move tmp = match.makeAIMove(sendDraw);
             if(tmp == null){
                 Toast.makeText(this, "AI is null.", Toast.LENGTH_SHORT).show();
@@ -146,7 +148,8 @@ public class PlayChess extends Activity {
             idName = "Draw";
 
         } else if(clicked == btnResign){
-
+            canUndo = true;
+            btnUndo.setEnabled(canUndo);
             idName = "Resign";
             String message = match.resignation();
             endMatch(message);
@@ -231,7 +234,7 @@ public class PlayChess extends Activity {
 
             // View
             promoButtons.setVisibility(View.INVISIBLE);
-            btnUndo.setEnabled(true);
+            btnUndo.setEnabled(canUndo);
             btnAI.setEnabled(true);
 
         }
@@ -262,8 +265,13 @@ public class PlayChess extends Activity {
         btnAI.setEnabled(false);
         btnDraw.setEnabled(false);
         btnResign.setEnabled(false);
-        TextDialogFragment saveMatch = new TextDialogFragment();
-        saveMatch.show(getFragmentManager(), "badfields");
+
+        Bundle bundle = new Bundle();
+        bundle.putString(MessageDialogFragment.MESSAGE_KEY, message);
+        DialogFragment displayResult = new MessageDialogFragment();
+        displayResult.setArguments(bundle);
+        displayResult.setCancelable(false);
+        displayResult.show(getFragmentManager(),"badfield");
     }
 
     private void toggleEnable(Button b){
