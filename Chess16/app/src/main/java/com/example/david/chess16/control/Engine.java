@@ -1,4 +1,6 @@
 package com.example.david.chess16.control;
+import android.content.Context;
+
 import com.example.david.chess16.pieces.*;
 
 import java.io.File;
@@ -32,8 +34,8 @@ public class Engine {
 	 * @throws IOException
 	 *             when serialization fails when file is not found
 	 */
-	public static void saveState() throws IOException {
-		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(storeDir + File.separator + storeFile));
+	public static void saveState(Context c) throws IOException {
+		ObjectOutputStream oos = new ObjectOutputStream(c.openFileOutput(storeFile, Context.MODE_PRIVATE));
 		oos.writeObject(savedMatches);
 	}
 
@@ -46,8 +48,8 @@ public class Engine {
 	 * @throws ClassNotFoundException
 	 *             when classes are out of sync
 	 */
-	public static void load() throws IOException, ClassNotFoundException {
-		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(storeDir + File.separator + storeFile));
+	public static void load(Context c) throws IOException, ClassNotFoundException {
+		ObjectInputStream ois = new ObjectInputStream(c.openFileInput(storeFile));
 		savedMatches = (ArrayList) ois.readObject();
 	}
 

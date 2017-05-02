@@ -38,7 +38,7 @@ public class TextDialogFragment extends DialogFragment {
                         Engine.saveMatch();
                         Toast.makeText(getContext(), "Match Saved as " + input.getText().toString(), Toast.LENGTH_SHORT).show();
                         try {
-                            Engine.saveState();
+                            Engine.saveState(getContext());
                         } catch (Exception e){
                             Toast.makeText(getContext(), "Seesion Not Saved", Toast.LENGTH_SHORT).show();
                             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();

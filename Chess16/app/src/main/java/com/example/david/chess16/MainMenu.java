@@ -27,7 +27,7 @@ public class MainMenu extends Activity {
 
         Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
         try {
-            Engine.load();
+            Engine.load(getApplicationContext());
         } catch (Exception e){
             Toast.makeText(getApplicationContext(), "Previous Seesion Not Loaded", Toast.LENGTH_SHORT).show();
         }
