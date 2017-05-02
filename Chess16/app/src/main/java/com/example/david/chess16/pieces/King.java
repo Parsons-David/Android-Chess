@@ -1,6 +1,6 @@
-package pieces;
+package com.example.david.chess16.pieces;
 
-import java.awt.Point;
+import com.example.david.chess16.control.Point;
 
 /**
  * 

@@ -1,13 +1,13 @@
-package pieces;
+package com.example.david.chess16.pieces;
 
-import java.awt.Point;
+import com.example.david.chess16.control.Point;
 
 /**
  * 
  * Rook Implementation of the Abstract Piece Object
  * 
- * @author      David Parsons
- * @author      Phil Plucinski
+ * @author David Parsons
+ * @author Phil Plucinski
  */
 public class Rook extends Piece {
 
@@ -19,21 +19,19 @@ public class Rook extends Piece {
 	/**
 	 * Constructor.
 	 * 
-	 * @param color piece color
-	 * @param location intial location
+	 * @param color
+	 *            piece color
+	 * @param location
+	 *            intial location
 	 */
 	public Rook(char color, Point location) {
 		super(color, location);
 	}
-	
-	
+
 	/**
-	 * Returns a int array that representing the mobility of the piece
-	 * or positions that the piece could move
-	 * 0s, 1s, 2s, in each position
-	 * 0 - not accessible
-	 * 1 - only for move
-	 * 2 - capture (implies move)
+	 * Returns a int array that representing the mobility of the piece or
+	 * positions that the piece could move 0s, 1s, 2s, in each position 0 - not
+	 * accessible 1 - only for move 2 - capture (implies move)
 	 *
 	 * @return mobility of game piece.
 	 */
@@ -69,7 +67,8 @@ public class Rook extends Piece {
 	/**
 	 * Updates rook location to the given location
 	 *
-	 * @param p new rook location
+	 * @param p
+	 *            new rook location
 	 */
 	public void move(Point p) {
 		super.move(p);

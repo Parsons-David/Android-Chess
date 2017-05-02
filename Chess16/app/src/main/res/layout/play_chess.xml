@@ -77,61 +77,61 @@
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn8a"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/br"
+                android:src="@drawable/br"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn8b"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bn"
+                android:src="@drawable/bn"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn8c"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bb"
+                android:src="@drawable/bb"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn8d"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bq"
+                android:src="@drawable/bq"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn8e"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bk"
+                android:src="@drawable/bk"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn8f"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bb"
+                android:src="@drawable/bb"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn8g"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bn"
+                android:src="@drawable/bn"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn8h"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/br"
+                android:src="@drawable/br"
                 android:background="@android:color/holo_green_dark" />
         </LinearLayout>
 
@@ -139,61 +139,61 @@
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn7a"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:onClick="onBoardClick"
                 android:id="@+id/btn7b"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn7c"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn7d"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn7e"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn7f"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/white" />
-            <Button
+            <ImageButton
                 android:id="@+id/btn7g"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn7h"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/bp"
+                android:src="@drawable/bp"
                 android:background="@android:color/white"/>
         </LinearLayout>
 
@@ -201,49 +201,49 @@
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn6a"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn6b"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn6c"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn6d"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn6e"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn6f"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn6g"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn6h"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
@@ -255,49 +255,49 @@
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn5a"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn5b"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn5c"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn5d"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn5e"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn5f"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white" />
-            <Button
+            <ImageButton
                 android:id="@+id/btn5g"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn5h"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
@@ -309,49 +309,49 @@
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn4a"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn4b"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn4c"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn4d"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn4e"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn4f"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn4g"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn4h"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
@@ -363,49 +363,49 @@
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn3a"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn3b"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn3c"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn3d"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn3e"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn3f"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/white" />
-            <Button
+            <ImageButton
                 android:id="@+id/btn3g"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn3h"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
@@ -417,61 +417,61 @@
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn2a"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
+                android:src="@drawable/wp"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn2b"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
+                android:src="@drawable/wp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn2c"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
+                android:src="@drawable/wp"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn2d"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
+                android:src="@drawable/wp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn2e"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
+                android:src="@drawable/wp"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn2f"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
+                android:src="@drawable/wp"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn2g"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
+                android:src="@drawable/wp"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn2h"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wp"
+                android:src="@drawable/wp"
                 android:background="@android:color/holo_green_dark" />
         </LinearLayout>
 
@@ -479,61 +479,61 @@
             android:layout_height="48dp"
             android:layout_width="match_parent">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn1a"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wr"
+                android:src="@drawable/wr"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn1b"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wk"
+                android:src="@drawable/wk"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn1c"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wb"
+                android:src="@drawable/wb"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn1d"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wq"
+                android:src="@drawable/wq"
                 android:background="@android:color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn1e"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wk"
+                android:src="@drawable/wk"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn1f"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wb"
+                android:src="@drawable/wb"
                 android:background="@android:color/white" />
-            <Button
+            <ImageButton
                 android:id="@+id/btn1g"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wn"
+                android:src="@drawable/wn"
                 android:background="@android:color/holo_green_dark"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn1h"
                 android:onClick="onBoardClick"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:drawableLeft="@drawable/wr"
+                android:src="@drawable/wr"
                 android:background="@android:color/white"/>
         </LinearLayout>
 

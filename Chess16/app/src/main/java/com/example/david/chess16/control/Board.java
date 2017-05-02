@@ -1,15 +1,8 @@
-package control;
+package com.example.david.chess16.control;
+import com.example.david.chess16.pieces.*;
 
-import java.awt.Point;
 import java.util.ArrayList;
 
-import pieces.Bishop;
-import pieces.King;
-import pieces.Knight;
-import pieces.Pawn;
-import pieces.Piece;
-import pieces.Queen;
-import pieces.Rook;
 
 /**
  * This class stores all of the Piece objects on the board. It keeps track of
@@ -272,7 +265,7 @@ public class Board {
 		return false;
 	}
 
-	ArrayList<Point> getValidMoves(Piece p) {
+	public ArrayList<Point> getValidMoves(Piece p) {
 		ArrayList<Point> validMoves = new ArrayList<Point>();
 
 		int[][] mobility = p.getMobility();
@@ -603,7 +596,7 @@ public class Board {
 					whitePieces.add(p);
 
 					Move m = new Move();
-					m.setMove(origin, target, null, null, turn);
+					m.setMove(origin, target, new Point(target.x, 4), null, turn);
 
 					return m;
 				} else {
@@ -631,7 +624,7 @@ public class Board {
 					blackPieces.add(p);
 
 					Move m = new Move();
-					m.setMove(origin, target, null, null, turn);
+					m.setMove(origin, target, new Point(target.x, 3), null, turn);
 
 					return m;
 				} else {

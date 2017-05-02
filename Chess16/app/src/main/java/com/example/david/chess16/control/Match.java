@@ -1,13 +1,12 @@
-package control;
+package com.example.david.chess16.control;
+import com.example.david.chess16.pieces.*;
 
-import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-import pieces.Piece;
 
 /**
  * This class is the representation of a chess match. A caller can execute
@@ -23,7 +22,7 @@ public class Match {
 	private String[][] displayBoard = new String[8][8];
 	private List<Move> moves = new ArrayList<Move>();
 	private String title;
-	private int currentMoveIndex = -1;
+	private int currentMoveIndex = 0;
 	private String endStatus;
 
 	/**
@@ -32,7 +31,8 @@ public class Match {
 	 */
 	public Match() {
 		engineBoard = new Board();
-		populateDisplayBoard();
+		displayBoard = populateDisplayBoard();
+		moves.add(new Move(populateDisplayBoard()));
 	}
 
 	public void endMatch() {
@@ -45,8 +45,9 @@ public class Match {
 	 * 
 	 * @return Move representation of the performed move
 	 */
-	public Move makeAIMove() {
+	public Move makeAIMove(boolean draw) {
 		char turn = engineBoard.getTurn();
+		Move ogMove = moves.get(currentMoveIndex);
 		Move move = null;
 		do {
 			ArrayList<Piece> pieces = (turn == 'w') ? engineBoard.whitePieces : engineBoard.blackPieces;
@@ -55,14 +56,15 @@ public class Match {
 			Collections.shuffle(moves);
 			for (Point point : moves) {
 				Point pOrigin = pieces.get(pieceNo).location;
-				String origin = String.valueOf(pOrigin.getX()) + String.valueOf('a' + pOrigin.getY());
-				String target = String.valueOf(point.getX()) + String.valueOf('a' + point.getY());
-				move = executeMove(origin, target, false, 'Q');
-				if (move != null) {
+				String origin = String.valueOf(pOrigin.getY() + 1) + String.valueOf((char) ('a' + pOrigin.getX()));
+				String target = String.valueOf(point.getY() + 1) + String.valueOf((char) ('a' + point.getX()));
+				move = executeMove(origin, target, draw, 'Q');
+				if (move != null && move != ogMove) {
 					break;
 				}
 			}
-		} while (move == null);
+			// Fix this.
+		} while (move == null || move == ogMove);
 
 		return move;
 	}
@@ -73,15 +75,11 @@ public class Match {
 	 * @return true if successful, false otherwise
 	 */
 	public Move undo() {
-		if (moves.isEmpty()) {
-			return null;
+		if (currentMoveIndex == 0) {
+			return moves.get(currentMoveIndex);
 		}
 		engineBoard.undo();
-		if (currentMoveIndex == 0) {
-			populateDisplayBoard();
-		} else {
-			displayBoard = moves.get(--currentMoveIndex).displayBoard;
-		}
+		displayBoard = moves.get(--currentMoveIndex).displayBoard;
 		moves.remove(moves.size() - 1);
 		return moves.get(currentMoveIndex);
 	}
@@ -98,7 +96,7 @@ public class Match {
 	 *            char indicating the desired promotion, if applicable
 	 * @return
 	 */
-	public Move executeMove(String o, String t, Boolean draw, char promotion) {
+	public Move executeMove(String o, String t, boolean draw, char promotion) {
 		Point origin = getPointFromString(o);
 		Point target = getPointFromString(t);
 		Move move = engineBoard.executeMove(engineBoard.board, engineBoard.whitePieces, engineBoard.blackPieces, origin,
@@ -158,6 +156,10 @@ public class Match {
 		return displayBoard;
 	}
 
+	public String getEndMessage() {
+		return endStatus;
+	}
+
 	/**
 	 * @return Title of the Match
 	 */
@@ -186,7 +188,9 @@ public class Match {
 	/**
 	 * Sets the displayBoard to the initial setup of a chess board.
 	 */
-	private void populateDisplayBoard() {
+	private String[][] populateDisplayBoard() {
+
+		String[][] displayBoard;
 
 		displayBoard = new String[8][8];
 
@@ -220,12 +224,14 @@ public class Match {
 				}
 			}
 		}
+
+		return displayBoard;
 	}
 
 	private Point getPointFromString(String p) {
 		p = p.toLowerCase();
-		int x = p.charAt(0) - '0';
-		int y = p.charAt(1) - 'a';
-		return new Point(y, x);
+		int y = p.charAt(0) - '1';
+		int x = p.charAt(1) - 'a';
+		return new Point(x, y);
 	}
 }

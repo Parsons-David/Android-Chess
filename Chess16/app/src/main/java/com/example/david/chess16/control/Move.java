@@ -1,6 +1,6 @@
-package control;
+package com.example.david.chess16.control;
+import com.example.david.chess16.control.*;
 
-import java.awt.Point;
 import java.util.ArrayList;
 
 /**
@@ -20,13 +20,18 @@ public class Move {
 	char promotionType = '\0';
 	char check = '\0';
 	String[][] displayBoard = null;
-	Boolean pendingDraw = false;
+	boolean pendingDraw = false;
 	char turn = 'w';
 
 	/**
 	 * No-arg constructor.
 	 */
 	Move() {
+
+	}
+
+	Move(String[][] defaultBoard) {
+		displayBoard = defaultBoard;
 	}
 
 	/**
@@ -49,7 +54,7 @@ public class Move {
 		this.secondPieceTarget = secondTarget;
 		this.promotionType = '\0';
 		this.check = '\0';
-		this.turn = turn;
+		this.turn = (turn == 'w' ? 'b' : 'w');
 	}
 
 	/**
@@ -133,7 +138,7 @@ public class Move {
 		return displayBoard;
 	}
 
-	public Boolean hasPendingDraw() {
+	public boolean hasPendingDraw() {
 		return pendingDraw;
 	}
 
@@ -141,13 +146,13 @@ public class Move {
 		ArrayList<String> promotables = new ArrayList<String>();
 		for (int i = 0; i < 8; i++) {
 			if (displayBoard[i][6].equals("wp")) {
-				promotables.add("6" + ('a' + i));
+				promotables.add("7" + ((char) ('a' + i)));
 			}
 			if (displayBoard[i][1].equals("bp")) {
-				promotables.add("1" + ('a' + i));
+				promotables.add("2" + ((char) ('a' + i)));
 			}
 		}
-		return null;
+		return promotables;
 	}
 
 	public char getTurn() {
@@ -177,18 +182,23 @@ public class Move {
 	 * origin to piece 1 and 2 destinations. Applies promotion if necessary.
 	 */
 	private void executeMoveOnDisplayBoard() {
-		String firstPiece = displayBoard[(int) firstPieceOrigin.getX()][(int) firstPieceOrigin.getY()];
+		String firstPiece = displayBoard[firstPieceOrigin.getX()][firstPieceOrigin.getY()];
 		if (isPromotion()) {
 			String color = firstPiece.substring(0, 1);
-			displayBoard[(int) firstPieceTarget.getX()][(int) firstPieceTarget.getY()] = color + promotionType;
+			displayBoard[firstPieceTarget.getX()][firstPieceTarget.getY()] = color + promotionType;
 		} else {
-			displayBoard[(int) firstPieceTarget.getX()][(int) firstPieceTarget.getY()] = firstPiece;
+			displayBoard[firstPieceTarget.getX()][firstPieceTarget.getY()] = firstPiece;
 		}
-		displayBoard[(int) firstPieceOrigin.getX()][(int) firstPieceOrigin.getY()] = "";
+		displayBoard[firstPieceOrigin.getX()][firstPieceOrigin.getY()] = "";
 		if (secondPieceOrigin != null) {
-			displayBoard[(int) secondPieceTarget.getX()][(int) secondPieceTarget
-					.getY()] = displayBoard[(int) firstPieceOrigin.getX()][(int) firstPieceOrigin.getY()];
-			displayBoard[(int) secondPieceOrigin.getX()][(int) secondPieceOrigin.getY()] = "";
+			if (displayBoard[secondPieceOrigin.getX()][secondPieceOrigin.getY()].substring(1, 2).equals("p")) {
+				displayBoard[secondPieceOrigin.getX()][secondPieceOrigin.getY()] = "";
+			} else {
+				displayBoard[secondPieceTarget.getX()][secondPieceTarget
+						.getY()] = displayBoard[secondPieceOrigin.getX()][secondPieceOrigin.getY()];
+				displayBoard[secondPieceOrigin.getX()][secondPieceOrigin.getY()] = "";
+
+			}
 		}
 	}
 
@@ -201,7 +211,7 @@ public class Move {
 		return "Piece 1: " + firstPieceOrigin.toString() + " to " + firstPieceTarget.toString() + "\nPromotion: "
 				+ (promotionType == '\0' ? "N/A" : promotionType) + "\nPiece 2: "
 				+ (secondPieceOrigin == null ? "N/A" : secondPieceOrigin.toString() + " to ")
-				+ (secondPieceOrigin == null ? "" : secondPieceTarget.toString());
+				+ (secondPieceTarget == null ? "" : secondPieceTarget.toString());
 	}
 
 }

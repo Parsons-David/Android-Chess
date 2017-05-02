@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlayChess" />
-        <activity android:name=".WatchChess" />
+        <activity android:name=".WatchMenu" />
         <activity android:name=".WatchMatch"></activity>
     </application>
 

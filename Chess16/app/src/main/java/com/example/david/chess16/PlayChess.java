@@ -1,6 +1,8 @@
 package com.example.david.chess16;
 
 import android.app.Activity;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -8,12 +10,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import control.Match;
-import control.Engine;
-import control.Move;
+import com.example.david.chess16.control.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,12 +23,16 @@ public class PlayChess extends Activity {
 
     private Match match;
     private Move currentMove;
+    private Move prevMove = null;
 
-    private Button[][] boardBtns;
+    // Move Stuff
+    private ArrayList<String> possiblePromos = new ArrayList<String>();
+
+    private ImageButton[][] boardBtns;
     private Button btnUndo, btnAI, btnDraw, btnResign;
     private LinearLayout promoButtons;
 
-    private Button selected = null;
+    private ImageButton selected = null;
     private Color sColor = null;
     private Boolean sendDraw = false;
 
@@ -38,12 +43,7 @@ public class PlayChess extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.play_chess);
 
-        match = Engine.startNewMatch("");
-        unpack(match.executeMove("1e", "1f", false, ' '));
-
         createButtonArray();
-
-//        createBoard();
 
         btnUndo = (Button) findViewById(R.id.btnUndo);
         btnAI = (Button) findViewById(R.id.btnAI);
@@ -55,6 +55,55 @@ public class PlayChess extends Activity {
 
         btnUndo.setEnabled(false);
 
+        match = Engine.startNewMatch("");
+//        unpack(match.executeMove("1a", "1h", false, 'Q'));
+        displayBoard(match.getCurrentDisplayBoard());
+
+
+        possiblePromos.add("8a");
+        possiblePromos.add("1h");
+
+    }
+
+    private void unpack (Move m){
+//        Toast.makeText(getApplicationContext(),"Unpacking...", Toast.LENGTH_SHORT).show();
+        if(currentMove == m){
+//        Toast.makeText(getApplicationContext(),"No New Move Made", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Can assume valid new move has been made
+        currentMove = m;
+
+        if(currentMove.hasPendingDraw()){
+            Toast.makeText(getApplicationContext(),"Pending Draw", Toast.LENGTH_SHORT).show();
+
+            Bundle bundle = new Bundle();
+            bundle.putString(ChessDialogFragment.MESSAGE_KEY, "Pending Draw");
+
+            DialogFragment draw = new ChessDialogFragment();
+            draw.setArguments(bundle);
+            draw.show(getFragmentManager(), "badfields");
+        }
+
+        btnDraw.setText("Send Draw");
+        sendDraw = false;
+
+
+        if(currentMove.getPossiblePromoteSpaces() == null){
+            Toast.makeText(getApplicationContext(),"Error Promote Spaces returned null.", Toast.LENGTH_SHORT).show();
+        } else {
+            possiblePromos = currentMove.getPossiblePromoteSpaces();
+        }
+
+
+        ((TextView) findViewById(R.id.txtTurn)).setText(currentMove.getTurn() == 'w' ? R.string.white_turn : R.string.black_turn);
+        displayBoard(currentMove.getPieces());
+
+        if(!match.isOngoing()){
+            endMatch(match.getEndMessage());
+        }
+
     }
 
     public void onButtonClick(View v){
@@ -65,16 +114,19 @@ public class PlayChess extends Activity {
             btnUndo.setEnabled(false);
 
             idName = "Undo";
-//            Board tmp = match.undo();
-//            unpackBoard(tmp);
+            Move tmp = match.undo();
+            unpack(tmp);
 //            return;
 
         } else if(clicked == btnAI){
 
             idName = "AI";
-//            Board tmp = match.executeAIMove();
-//            unpackBoard(tmp);
-//            return;
+            Move tmp = match.makeAIMove(sendDraw);
+            if(tmp == null){
+                Toast.makeText(this, "AI is null.", Toast.LENGTH_SHORT).show();
+            }
+            unpack(tmp);
+            return;
 
 
         } else if(clicked == btnDraw){
@@ -86,8 +138,9 @@ public class PlayChess extends Activity {
         } else if(clicked == btnResign){
 
             idName = "Resign";
-//            String message = match.resignation();
-//            endMatch(message);
+            String message = match.resignation();
+            endMatch(message);
+            Engine.saveMatch();
 //            return;
 
         } else {
@@ -102,7 +155,7 @@ public class PlayChess extends Activity {
     }
 
     public void onBoardClick(View v){
-        Button clicked = (Button) v;
+        ImageButton clicked = (ImageButton) v;
         String idName = v.getResources().getResourceName(clicked.getId());
         idName = idName.substring(idName.length() - 2);
 //        Toast.makeText(this, "Space " + idName + " pressed.", Toast.LENGTH_SHORT).show();
@@ -111,12 +164,11 @@ public class PlayChess extends Activity {
         if(selected == null){ // Selecting First Piece to move (getting src)
 
             // HANDLE PROMOTION
-            ArrayList<String> possiblePromos = new ArrayList<String>();
-            possiblePromos.add("8a");
-            possiblePromos.add("1h");
-//            possiblePromos = playingBoard.getPossiblePromoteSpaces();
             if(possiblePromos.contains(idName)){
                 promoButtons.setVisibility(View.VISIBLE);
+            }
+            for(String i : possiblePromos){
+                Toast.makeText(this, i + " ?= " + idName, Toast.LENGTH_SHORT).show();
             }
 
             // Control
@@ -134,13 +186,14 @@ public class PlayChess extends Activity {
                 String sidName = selected.getResources().getResourceName(selected.getId());
                 sidName = sidName.substring(sidName.length() - 2);
 
-                Toast.makeText(getApplicationContext(), sidName + " -> " + idName, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), sidName + "," + idName + ", " + sendDraw + ", \' \'", Toast.LENGTH_SHORT).show();
 
-
-
-//                Board tmp = match.executeMove(sidName, idName, sendDraw, ' ');
-//                unpackBoard(tmp);
-//                return;
+                Move tmp = match.executeMove(sidName, idName, sendDraw, 'Q');
+                if(tmp != null){
+                    unpack(tmp);
+                } else {
+                    Toast.makeText(getApplicationContext(),"Null Move", Toast.LENGTH_SHORT).show();
+                }
 
             }
 
@@ -160,20 +213,16 @@ public class PlayChess extends Activity {
 
     }
 
-    private void unpack (Move m){
-        currentMove = m;
-        ((TextView) findViewById(R.id.txtTurn)).setText(currentMove.getTurn() == 'w' ? R.string.white_turn : R.string.black_turn);
-
-        displayBoard(currentMove.getPieces());
-    }
-
     private void displayBoard(String[][] pieces){
 
         for(int i = 0; i < 8; i++){
             for (int j = 0; j < 8; j++) {
                 String p = pieces[i][j];
                 if(p != ""){
-                    boardBtns[i][j].setBackgroundResource(getPieceIconId(p));
+//                    Toast.makeText(getApplicationContext(), String.valueOf(i) + ", " + String.valueOf(j) + " -> " + getPieceIconId(p) + " " + p, Toast.LENGTH_SHORT).show();
+                    boardBtns[i][j].setImageResource(getPieceIconId(p));
+                } else {
+                    boardBtns[i][j].setImageResource(0);
                 }
                 setToBoardColor(boardBtns[i][j]);
             }
@@ -182,14 +231,18 @@ public class PlayChess extends Activity {
     }
 
     private void endMatch(String message){
-
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+        btnDraw.setEnabled(false);
+        btnAI.setEnabled(false);
+        btnDraw.setEnabled(false);
+        btnResign.setEnabled(false);
     }
 
     private void toggleEnable(Button b){
         b.setEnabled(!b.isEnabled());
     }
 
-    private void setToBoardColor(Button b){
+    private void setToBoardColor(ImageButton b){
         String idName = b.getResources().getResourceName(b.getId());
         idName = idName.substring(idName.length() - 2);
 
@@ -211,7 +264,7 @@ public class PlayChess extends Activity {
         }
     }
 
-    private void createBoard() {
+    private String[][] createBoard() {
         String tmpTxtBoard[][] = new String[8][8];
 
         tmpTxtBoard[0][7] = "bR";
@@ -245,19 +298,19 @@ public class PlayChess extends Activity {
             }
         }
 
-        displayBoard(tmpTxtBoard);
+        return tmpTxtBoard;
     }
 
 
 
     public void createButtonArray(){
 
-        boardBtns = new Button[8][8];
+        boardBtns = new ImageButton[8][8];
 
         for(int i = 0; i < 8; i++){
             for (int j = 0; j < 8; j++) {
-                String id =  "btn"  + String.valueOf(8 - j) + ((char) ('a' + i));
-                Button b = (Button) findViewById(getResources().getIdentifier(id, "id", getApplicationContext().getPackageName()));
+                String id =  "btn"  + String.valueOf(j + 1) + ((char) ('a' + i));
+                ImageButton b = (ImageButton) findViewById(getResources().getIdentifier(id, "id", getApplicationContext().getPackageName()));
                 if(b == null){
                     Toast.makeText(this, "Error Loading", Toast.LENGTH_SHORT).show();
                 } else {
@@ -272,7 +325,7 @@ public class PlayChess extends Activity {
         int id = 0;
         piece = piece.toLowerCase();
         if(piece.charAt(0) == 'b'){
-            switch (piece.charAt(0)){
+            switch (piece.charAt(1)){
                 case 'r':
                     id = R.drawable.br;
                     break;
@@ -293,7 +346,7 @@ public class PlayChess extends Activity {
                     break;
             }
         } else {
-            switch (piece.charAt(0)){
+            switch (piece.charAt(1)){
                 case 'r':
                     id = R.drawable.wr;
                     break;

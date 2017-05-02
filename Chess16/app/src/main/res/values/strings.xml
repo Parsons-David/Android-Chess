@@ -1,27 +1,10 @@
 <resources>
     <string name="app_name">Chess</string>
     <string-array name="menu_array">
-        <item>Sesh vs. Tjang</item>
-        <item>David vs. Sarah</item>
-        <item>Sesh vs. Tjang</item>
-        <item>David vs. Sarah</item>
-        <item>Sesh vs. Tjang</item>
-        <item>David vs. Sarah</item>
-        <item>Sesh vs. Tjang</item>
-        <item>David vs. Sarah</item>
-        <item>Sesh vs. Tjang</item>
-        <item>David vs. Sarah</item>
-        <item>Sesh vs. Tjang</item>
-        <item>David vs. Sarah</item>
-        <item>Sesh vs. Tjang</item>
-        <item>David vs. Sarah</item>
-        <item>Sesh vs. Tjang</item>
-        <item>David vs. Sarah</item>
-        <item>Sesh vs. Tjang</item>
-        <item>David vs. Sarah</item>
-        <item>Sesh vs. Tjang</item>
-        <item>David vs. Sarah</item>
+        <item>No Matches Found</item>
     </string-array>
     <string name="white_turn">Turn: White</string>
     <string name="black_turn">Turn: Black</string>
+    <string name="send_draw">Send Draw</string>
+    <string name="cancel_draw">Cancel Draw</string>
 </resources>

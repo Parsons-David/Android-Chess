@@ -1,29 +1,31 @@
-package pieces;
+package com.example.david.chess16.pieces;
 
-import java.awt.Point;
+import com.example.david.chess16.control.Point;
 
 /**
  * 
  * Bishop Implementation of the Abstract Piece Object
  * 
- * @author      David Parsons
- * @author      Phil Plucinski
+ * @author David Parsons
+ * @author Phil Plucinski
  */
 public class Bishop extends Piece {
 
 	/**
 	 * Constructor.
 	 * 
-	 * @param color piece color
-	 * @param location intial location
+	 * @param color
+	 *            piece color
+	 * @param location
+	 *            intial location
 	 */
 	public Bishop(char color, Point location) {
 		super(color, location);
 	}
 
 	/**
-	 * Returns the string representation of a bishop to be used in the ascii board
-	 * representation.
+	 * Returns the string representation of a bishop to be used in the ascii
+	 * board representation.
 	 *
 	 * @return the ascii representation of a bishop.
 	 */
@@ -32,12 +34,9 @@ public class Bishop extends Piece {
 	}
 
 	/**
-	 * Returns a int array that representing the mobility of the piece
-	 * or positions that the piece could move
-	 * 0s, 1s, 2s, in each position
-	 * 0 - not accessible
-	 * 1 - only for move
-	 * 2 - capture (implies move)
+	 * Returns a int array that representing the mobility of the piece or
+	 * positions that the piece could move 0s, 1s, 2s, in each position 0 - not
+	 * accessible 1 - only for move 2 - capture (implies move)
 	 *
 	 * @return mobility of game piece.
 	 */
@@ -65,7 +64,8 @@ public class Bishop extends Piece {
 	/**
 	 * Updates bishop location to the given location
 	 *
-	 * @param p new bishop location
+	 * @param p
+	 *            new bishop location
 	 */
 	public void move(Point p) {
 		super.move(p);

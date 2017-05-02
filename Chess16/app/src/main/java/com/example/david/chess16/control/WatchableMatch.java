@@ -1,4 +1,5 @@
-package control;
+package com.example.david.chess16.control;
+import com.example.david.chess16.pieces.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,7 +9,7 @@ public class WatchableMatch {
 
 	private String[][] displayBoard = new String[8][8];
 	private List<Move> moves = new ArrayList<Move>();
-	int currentMoveIndex = -1;
+	int currentMoveIndex = 0;
 	String title;
 	String endMessage;
 	Date date;
@@ -26,6 +27,11 @@ public class WatchableMatch {
 	public void setToZerothMove() {
 		populateDisplayBoard();
 		currentMoveIndex = -1;
+	}
+
+	public String[][] start() {
+		currentMoveIndex = 0;
+		return moves.get(0).displayBoard;
 	}
 
 	/**
@@ -49,15 +55,10 @@ public class WatchableMatch {
 	 * @return Previous Move
 	 */
 	public String[][] getPrevMove() {
-		if (currentMoveIndex < -1) {
+		if (currentMoveIndex <= 0) {
 			return null;
 		}
-		if (currentMoveIndex == -1) {
-			setToZerothMove();
-			currentMoveIndex--;
-		} else {
-			displayBoard = moves.get(--currentMoveIndex).displayBoard;
-		}
+		displayBoard = moves.get(--currentMoveIndex).displayBoard;
 		return displayBoard;
 	}
 

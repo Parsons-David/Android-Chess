@@ -5,12 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.view.View;
 import android.widget.Toast;
 
@@ -61,7 +58,7 @@ public class MainMenu extends Activity {
 
     public void showWatch(View v){
         Bundle bundle = new Bundle();
-        Intent intent = new Intent(this, WatchChess.class);
+        Intent intent = new Intent(this, WatchMenu.class);
         intent.putExtras(bundle);
         startActivity(intent);
     }

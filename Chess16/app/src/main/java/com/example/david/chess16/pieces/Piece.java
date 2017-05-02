@@ -1,15 +1,14 @@
+package com.example.david.chess16.pieces;
 
-package pieces;
-
-import java.awt.Point;
+import com.example.david.chess16.control.Point;
 
 /**
  * 
  * Abstract Piece Object
  * 
-* @author      David Parsons
-* @author      Phil Plucinski
-*/
+ * @author David Parsons
+ * @author Phil Plucinski
+ */
 public abstract class Piece {
 
 	/**
@@ -25,8 +24,10 @@ public abstract class Piece {
 	/**
 	 * Constructor.
 	 * 
-	 * @param color piece color
-	 * @param location initial location
+	 * @param color
+	 *            piece color
+	 * @param location
+	 *            initial location
 	 */
 	Piece(char color, Point location) {
 		this.color = color;
@@ -34,12 +35,9 @@ public abstract class Piece {
 	}
 
 	/**
-	 * Returns a int array that representing the mobility of the piece
-	 * or positions that the piece could move
-	 * 0s, 1s, 2s, in each position
-	 * 0 - not accessible
-	 * 1 - only for move
-	 * 2 - capture (implies move)
+	 * Returns a int array that representing the mobility of the piece or
+	 * positions that the piece could move 0s, 1s, 2s, in each position 0 - not
+	 * accessible 1 - only for move 2 - capture (implies move)
 	 *
 	 * @return mobility of game piece.
 	 */
@@ -48,7 +46,8 @@ public abstract class Piece {
 	/**
 	 * Updates pieces location to the given location
 	 *
-	 * @param p new piece location
+	 * @param p
+	 *            new piece location
 	 */
 	public void move(Point p) {
 		location = p;
